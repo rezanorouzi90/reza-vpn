@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>پنل RezaVPN حرفه‌ای</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>👑 پنل حرفه‌ای RezaVPN</h1>
+
+  <div class="config">
+    <h2>کانفیگ شماره 1 (آلمان)</h2>
+    <p>وضعیت: <span class="locked">قفل</span></p>
+    <button onclick="unlock()">درخواست باز کردن</button>
+  </div>
+
+  <div id="form" class="hidden">
+    <h3>📋 اطلاعات کانفیگ</h3>
+    <input placeholder="نام کانفیگ" />
+    <input placeholder="حجم (گیگ)" />
+    <input placeholder="تعداد روز" />
+    <input placeholder="تعداد کاربر" />
+    <button onclick="activate()">تایید نهایی</button>
+  </div>
+
+  <div id="notif" class="hidden">✅ کانفیگ فعال شد</div>
+
+  <div id="qr" class="hidden">
+    <h3>QR Code:</h3>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=vless://example" alt="QR" />
+    <button onclick="copyConfig()">📋 کپی کانفیگ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
